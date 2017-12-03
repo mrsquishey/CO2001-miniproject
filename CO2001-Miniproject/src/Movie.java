@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,15 +9,13 @@ public class Movie {
 	
 	private int movieID, imdbID, tmdbID;
 	private String title, genres, timeStamp, tag;
-	private double rating;	
-	static private HashMap <Object, ArrayList<Object>> movieList = new HashMap <Object, ArrayList<Object>>();
+	private double rating;
+	
 	static private String links = "/Users/James/Desktop/ml-latest-smallz/links.csv";
 	static private String movies = "C:\\Users\\James\\Desktop\\movies.csv";
 	static private String ratings = "/Users/James/Desktop/ml-latest-smallz/ratings.csv";
 	static private String tags = "/Users/James/Desktop/ml-latest-smallz/tags.csv";
-	static private BufferedReader br = null;
-	static 	private String line = "";
-    static private String cvsSplitBy = ",";
+
 	
 	
 	public Movie(){
@@ -42,6 +41,8 @@ public class Movie {
 		return(this.getMovieID() + ", " + this.getTitle());
 	}
 	
+	
+/*	
 	public void setIdAndTitle(){
 		try (BufferedReader br = new BufferedReader(new FileReader(movies))) {
 
@@ -69,7 +70,7 @@ public class Movie {
         }
 		
 	}
-
+*/
 	
 	public int getMovieID() {
 		return movieID;

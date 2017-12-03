@@ -1,29 +1,34 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
+ 
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
-public class Driver {
-    static private Movie movie1 = new Movie();
-    static private Movie movie2 = new Movie();
-    static private Movie movie3 = new Movie();
-    static private Movie movie4 = new Movie();
-    static private Movie movie5 = new Movie();
-    static private Movie movie6 = new Movie();
-    static private Movie movie7 = new Movie();
-    static private Movie movie8 = new Movie();
-    static private Movie movie9 = new Movie();
-    static private Movie movie10 = new Movie();
-    
-	public static void main(String[] args) {
-		
-		movie1.setIdAndTitle();
-		movie2.setIdAndTitle();
-		System.out.println(movie1.toString()+", "+movie2.toString());
-		
-	}
-	
-	
+    public class Driver extends Application {
+        public static void main(String[] args) {
+            launch(args);
+        }
+        
+        @Override
+        public void start(Stage primaryStage) {
+            primaryStage.setTitle("Hello World!");
+            Button btn = new Button();
+            btn.setText("Say 'Hello World'");
+            btn.setOnAction(new EventHandler<ActionEvent>() {
+     
+                @Override
+                public void handle(ActionEvent event) {
+                    System.out.println("Hello World!");
+                }
+            });
+            
+            StackPane root = new StackPane();
+            root.getChildren().add(btn);
+            primaryStage.setScene(new Scene(root, 300, 250));
+            primaryStage.show();
+        }
+    }
 
-}

@@ -1,23 +1,34 @@
+import java.io.Serializable;
 
-public class User {
+public class User implements Serializable{
 	private String username, password, gender;
 	private int userID, age;
 	
-	public User(String username, String password, String gender, int userID, int age) {
+public User() {
+		
+		this.username = "none";
+		this.password = "none";
+		this.userID = -1;
+		
+	}
+	
+	public User(String username, String password, int userID) {
 		
 		this.username = username;
 		this.password = password;
-		this.gender = gender;
 		this.userID = userID;
-		this.age = age;
+		
 	}
 
 	public String getUsername() {
 		return username;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUsername(String username) throws IllegalArgumentException {
+		if(password.length() > 3){
+			throw new IllegalArgumentException();
+		}else{
+		this.username = username;}
 	}
 
 	public String getPassword() {
@@ -28,13 +39,6 @@ public class User {
 		this.password = password;
 	}
 
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
 
 	public int getUserID() {
 		return userID;
@@ -44,12 +48,5 @@ public class User {
 		this.userID = userID;
 	}
 
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
 
 }
