@@ -16,7 +16,7 @@ public class Movie {
 	static private String ratings = "/Users/James/Desktop/ml-latest-smallz/ratings.csv";
 	static private String tags = "/Users/James/Desktop/ml-latest-smallz/tags.csv";
 
-	
+	//m
 	
 	public Movie(){
 		this.movieID = -1;
