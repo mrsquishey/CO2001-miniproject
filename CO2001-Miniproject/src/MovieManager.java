@@ -75,4 +75,12 @@ public class MovieManager {
 	public String getMovieList(){
 		return movieList.toString();
 	}
+	
+	public String getShortList(){
+		String x = movieList.get(0).toString();
+		String y = movieList.get(123).toString();
+		String z = movieList.get(413).toString();
+		return (x+y+z);
+		
+	}
 }
