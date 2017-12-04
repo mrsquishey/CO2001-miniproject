@@ -1,14 +1,15 @@
 import java.io.Serializable;
 
-public class User implements Serializable{
+	public class User implements Serializable{
 	private String username, password, gender;
 	private int userID, age;
 	
-public User() {
-		
-		this.username = "none";
-		this.password = "none";
-		this.userID = -1;
+	
+
+	public User(){
+		this.setUsername("username");
+		this.setPassword("password");
+		this.setUserID(-1);
 		
 	}
 	
@@ -24,19 +25,26 @@ public User() {
 		return username;
 	}
 
-	public void setUsername(String username) throws IllegalArgumentException {
-		if(password.length() > 3){
-			throw new IllegalArgumentException();
-		}else{
-		this.username = username;}
+	public void setUsername(String username) {
+		mainloop:
+		for(int i = 0; i <UserHandler.userList.size(); i++) {
+			if(UserHandler.userList.get(i).getUsername().equals(username)) {	
+				this.username="broken";
+			}
+		}
+	this.username=username;
+		
 	}
 
 	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String password) throws IllegalArgumentException {
+		if(password.length() < 3){
+			throw new IllegalArgumentException();
+		}else{
+		this.password = password;}
 	}
 
 
@@ -46,6 +54,10 @@ public User() {
 
 	public void setUserID(int userID) {
 		this.userID = userID;
+	}
+	
+	public String toString() {
+		return("("+this.getUsername() + ", " + this.getPassword() + ", " + this.getUserID()+")");
 	}
 
 
