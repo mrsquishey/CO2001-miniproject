@@ -23,6 +23,9 @@ public class MovieManager {
 		
 	}
 	
+	public ArrayList<Movie> getMList(){
+		return movieList;
+	}
 	
 	public void createMovieList(){
 		

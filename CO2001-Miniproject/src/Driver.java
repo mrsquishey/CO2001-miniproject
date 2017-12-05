@@ -16,7 +16,7 @@ import javafx.stage.Stage;
     public void start(Stage primaryStage) throws Exception{
     	Parent root = FXMLLoader.load(getClass().getResource("Miniproject.fxml"));
     	primaryStage.setTitle("Test");
-    	primaryStage.setScene(new Scene(root, 580, 500));
+    	primaryStage.setScene(new Scene(root));
     	primaryStage.show();
     	
     }
