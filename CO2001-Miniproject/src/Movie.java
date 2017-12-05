@@ -11,10 +11,7 @@ public class Movie {
 	private String title, genres, timeStamp, tag;
 	private double rating;
 	
-	static private String links = "/Users/James/Desktop/ml-latest-smallz/links.csv";
-	static private String movies = "C:\\Users\\James\\Desktop\\movies.csv";
-	static private String ratings = "/Users/James/Desktop/ml-latest-smallz/ratings.csv";
-	static private String tags = "/Users/James/Desktop/ml-latest-smallz/tags.csv";
+	
 
 	//m
 	
