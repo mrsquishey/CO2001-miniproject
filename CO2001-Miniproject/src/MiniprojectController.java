@@ -1,10 +1,4 @@
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -30,22 +23,13 @@ public class MiniprojectController{
 	TextField password;
 	
 	
-	public void handleButtonClick(){
-		System.out.println("This works!");
-	
-		usern = username.getText();
-		passw = password.getText();
-		mainloop:
-			for(int i = 0; i <UserHandler.userList.size(); i++) {
-				if(UserHandler.userList.get(i).getUsername().equals(usern)) {	
-					usern="broken";
-				}
-			}
-		if(usern.equals("broken")) {
-			
-		}else {
-		userHandler.addUser(usern, passw);}
-		System.out.println(userHandler.userList.toString());
+	public void handleButtonClick(ActionEvent event) throws IOException{
+		Parent startPage = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
+		Scene startPageScene = new Scene(startPage);
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		
+		window.setScene(startPageScene);
+		window.show();
 	}
 	
 	public void usernameSet() {
