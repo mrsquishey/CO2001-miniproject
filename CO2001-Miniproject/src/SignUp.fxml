@@ -7,19 +7,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="532.0" prefWidth="670.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="SignUp">
+<AnchorPane prefHeight="532.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUp">
    <children>
-      <Text layoutX="229.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+      <Text layoutX="201.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
          <font>
             <Font name="Helvetica Neue" size="59.0" />
          </font>
       </Text>
-      <TextField fx:id="username" alignment="CENTER" layoutX="252.0" layoutY="186.0" promptText="Username" />
-      <TextField fx:id="password" alignment="CENTER" layoutX="252.0" layoutY="249.0" promptText="Password" />
-      <RadioButton fx:id="male" layoutX="205.0" layoutY="352.0" mnemonicParsing="false" text="Male" AnchorPane.bottomAnchor="162.5" />
-      <RadioButton fx:id="female" layoutX="304.0" layoutY="352.0" mnemonicParsing="false" text="Female" />
-      <RadioButton fx:id="other" layoutX="415.0" layoutY="352.0" mnemonicParsing="false" text="Other" />
-      <Button fx:id="signup" onAction="#handleButtonClick" layoutX="305.0" layoutY="429.0" mnemonicParsing="false" text="Sign Up" />
+      <TextField fx:id="username" alignment="CENTER" layoutX="220.0" layoutY="189.0" promptText="Username" />
+      <TextField fx:id="password" alignment="CENTER" layoutX="220.0" layoutY="252.0" promptText="Password" />
+      <RadioButton fx:id="male" layoutX="173.0" layoutY="356.0" mnemonicParsing="false" text="Male" AnchorPane.bottomAnchor="159.0" />
+      <RadioButton fx:id="female" layoutX="272.0" layoutY="355.0" mnemonicParsing="false" text="Female" />
+      <RadioButton fx:id="other" layoutX="383.0" layoutY="355.0" mnemonicParsing="false" text="Other" />
+      <Button fx:id="signup" layoutX="273.0" layoutY="432.0" mnemonicParsing="false" onAction="#handleButtonClick" text="Sign Up" />
    </children>
 </AnchorPane>

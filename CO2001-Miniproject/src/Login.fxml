@@ -13,8 +13,8 @@
             <Font name="Eras Bold ITC" size="30.0" />
          </font>
       </Text>
-      <Button fx:id="backButton" layoutX="58.0" layoutY="456.0" mnemonicParsing="false" onAction="#clickBack" text="Log Off" />
-      <Button fx:id="saveButton" layoutX="444.0" layoutY="456.0" mnemonicParsing="false" onAction="#saveUsers" text="Save Users" />
+      <Button fx:id="backButton" layoutX="58.0" layoutY="456.0" mnemonicParsing="false" onAction="#clickBack" text="Back" />
+    
       <TextField fx:id="searchBar" alignment="CENTER" layoutX="131.0" layoutY="238.0" prefHeight="56.0" prefWidth="313.0" promptText="Search film title..." />
       <Button layoutX="262.0" layoutY="316.0" mnemonicParsing="false" onAction="#onSearchClick" text="Search" />
       <Text fx:id="searchResult" layoutX="30.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No film searched" textAlignment="CENTER" wrappingWidth="524.9999980330467" />

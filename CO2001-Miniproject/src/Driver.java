@@ -17,6 +17,7 @@ import javafx.stage.Stage;
     	Parent root = FXMLLoader.load(getClass().getResource("Miniproject.fxml"));
     	primaryStage.setTitle("Test");
     	primaryStage.setScene(new Scene(root));
+    	primaryStage.setResizable(false);
     	primaryStage.show();
     	
     }

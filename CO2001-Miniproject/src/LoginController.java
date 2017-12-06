@@ -31,7 +31,7 @@ public class LoginController {
 	TextField password;
 	@FXML Text searchResult;
 	
-	public void saveUsers(){
+	public static void saveUsers(){
 		try {
 			 
 
@@ -60,7 +60,7 @@ public class LoginController {
 	}
 	
 	public void clickBack(ActionEvent event) throws IOException{
-		Parent startPage = FXMLLoader.load(getClass().getResource("Miniproject.fxml"));
+		Parent startPage = FXMLLoader.load(getClass().getResource("Menu.fxml"));
 		Scene startPageScene = new Scene(startPage);
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		

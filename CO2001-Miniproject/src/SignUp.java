@@ -1,7 +1,15 @@
+import java.io.IOException;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class SignUp {
 
@@ -18,7 +26,7 @@ public class SignUp {
 	RadioButton male, female, button;
 	
 	
-	public void handleButtonClick(){
+	public void handleButtonClick(ActionEvent event) throws IOException{
 		System.out.println("This works!");
 	
 		usern = username.getText();
@@ -34,5 +42,11 @@ public class SignUp {
 		}else {
 		userHandler.addUser(usern, passw);}
 		System.out.println(userHandler.userList.toString());
-	
+		LoginController.saveUsers();
+		Parent startPage = FXMLLoader.load(getClass().getResource("Miniproject.fxml"));
+		Scene startPageScene = new Scene(startPage);
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		
+		window.setScene(startPageScene);
+		window.show();
 }}

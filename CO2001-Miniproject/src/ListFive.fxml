@@ -5,20 +5,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="532.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListFiveController">
+<AnchorPane prefHeight="532.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListFiveController">
    <children>
       <AnchorPane />
-      <Text layoutX="100.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Five Random Films">
+      <Text layoutX="73.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Five Random Films">
          <font>
             <Font name="Helvetica Neue" size="55.0" />
          </font>
       </Text>
-      <Text fx:id="film1" layoutX="108.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Film1" textAlignment="CENTER" wrappingWidth="469.9542541503906" />
-      <Text fx:id="film2" layoutX="106.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Film1" textAlignment="CENTER" wrappingWidth="469.9542541503906" />
-      <Text fx:id="film3" layoutX="107.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Film1" textAlignment="CENTER" wrappingWidth="469.9542541503906" />
-      <Text fx:id="film4" layoutX="104.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Film1" textAlignment="CENTER" wrappingWidth="469.9542541503906" />
-      <Text fx:id="film5" layoutX="103.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Film1" textAlignment="CENTER" wrappingWidth="469.9542541503906" />
-      <Button fx:id="submit" layoutX="300.0" layoutY="427.0" mnemonicParsing="false" onAction="#onClick" text="Find Films" />
-      <Button onAction="#clickBack" layoutX="39.0" layoutY="427.0" mnemonicParsing="false" text="Back" />
+      <Text fx:id="film1" layoutX="57.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="469.9542541503906" />
+      <Text fx:id="film2" layoutX="55.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="469.9542541503906" />
+      <Text fx:id="film3" layoutX="56.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="469.9542541503906" />
+      <Text fx:id="film4" layoutX="53.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="469.9542541503906" />
+      <Text fx:id="film5" layoutX="52.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="469.9542541503906" />
+      <Button fx:id="submit" layoutX="265.0" layoutY="427.0" mnemonicParsing="false" onAction="#onClick" text="Find Films" />
+      <Button layoutX="39.0" layoutY="427.0" mnemonicParsing="false" onAction="#clickBack" text="Back" />
    </children>
 </AnchorPane>
