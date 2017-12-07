@@ -29,11 +29,12 @@ public class UserHandler {
 		}
 	}
 	
-	public void addUser(String username, String password) {
+	public void addUser(String username, String password, String gender) {
 		User m = new User();
 		m.setUsername(username);
 		m.setPassword(password);
-		m.setUserID(id);
+		m.setUserID(userList.size()+1);
+		m.setGender(gender);
 		userList.add(m);
 		id++;
 	}

@@ -15,7 +15,7 @@ public class SignUp {
 
 	UserHandler userHandler = new UserHandler();
 	String usern, passw;
-	
+	String gender = "";
 	@FXML
 	Button signup,login,backButton;
 	@FXML
@@ -23,7 +23,7 @@ public class SignUp {
 	@FXML
 	TextField password;
 	@FXML
-	RadioButton male, female, button;
+	RadioButton male, female, other;
 	
 	
 	public void handleButtonClick(ActionEvent event) throws IOException{
@@ -31,6 +31,10 @@ public class SignUp {
 	
 		usern = username.getText();
 		passw = password.getText();
+		
+		if(male.isSelected()){gender = "male";}
+		if(female.isSelected()){gender = "female";}
+		if(other.isSelected()){gender = "other";}
 		mainloop:
 			for(int i = 0; i <UserHandler.userList.size(); i++) {
 				if(UserHandler.userList.get(i).getUsername().equals(usern)) {	
@@ -40,8 +44,9 @@ public class SignUp {
 		if(usern.equals("broken")) {
 			
 		}else {
-		userHandler.addUser(usern, passw);}
+		userHandler.addUser(usern, passw, gender);}
 		System.out.println(userHandler.userList.toString());
+		
 		LoginController.saveUsers();
 		Parent startPage = FXMLLoader.load(getClass().getResource("Miniproject.fxml"));
 		Scene startPageScene = new Scene(startPage);
